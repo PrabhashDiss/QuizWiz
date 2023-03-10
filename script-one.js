@@ -47,7 +47,7 @@ setInterval(() => {
 // Set start
 var start = true;
 
-qnumber = Questions.length;
+const qnumber = Questions.length;
 
 var isEvaluated = false;
 var selectedOption = 0;
