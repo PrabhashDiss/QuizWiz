@@ -34,6 +34,7 @@ const Questions = [{
 var start = true;
 
 var isOptionSelected = false;
+var selectedOption = 0;
 
 // Iterate
 function iterate(id) {
@@ -79,6 +80,7 @@ op1.addEventListener("click", () => {
     op4.style.backgroundColor = "lightskyblue";
     selected = op1.value;
     isOptionSelected = true;
+    selectedOption = 1;
 })
 
 // Show selection for op2
@@ -89,6 +91,7 @@ op2.addEventListener("click", () => {
     op4.style.backgroundColor = "lightskyblue";
     selected = op2.value;
     isOptionSelected = true;
+    selectedOption = 2;
 })
 
 // Show selection for op3
@@ -99,6 +102,7 @@ op3.addEventListener("click", () => {
     op4.style.backgroundColor = "lightskyblue";
     selected = op3.value;
     isOptionSelected = true;
+    selectedOption = 3;
 })
 
 // Show selection for op4
@@ -109,6 +113,7 @@ op4.addEventListener("click", () => {
     op4.style.backgroundColor = "lightgoldenrodyellow";
     selected = op4.value;
     isOptionSelected = true;
+    selectedOption = 4;
 })
 
 
@@ -120,9 +125,33 @@ evaluate[0].addEventListener("click", () => {
     if (selected == "true") {
         result[0].innerHTML = "True";
         result[0].style.color = "green";
+        if (selectedOption == 1) {
+            op1.style.backgroundColor = "lightgreen";
+        }
+        if (selectedOption == 2) {
+            op2.style.backgroundColor = "lightgreen";
+        }
+        if (selectedOption == 3) {
+            op3.style.backgroundColor = "lightgreen";
+        }
+        if (selectedOption == 4) {
+            op4.style.backgroundColor = "lightgreen";
+        }
     } else {
         result[0].innerHTML = "False";
         result[0].style.color = "red";
+        if (selectedOption == 1) {
+            op1.style.backgroundColor = "lightcoral";
+        }
+        if (selectedOption == 2) {
+            op2.style.backgroundColor = "lightcoral";
+        }
+        if (selectedOption == 3) {
+            op3.style.backgroundColor = "lightcoral";
+        }
+        if (selectedOption == 4) {
+            op4.style.backgroundColor = "lightcoral";
+        }
     }
 })
 }
