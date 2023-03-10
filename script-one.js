@@ -142,6 +142,10 @@ if (id < 2 && isOptionSelected) {
     id++;
     iterate(id);
     console.log(id);
+    op1.style.backgroundColor = "lightskyblue";
+    op2.style.backgroundColor = "lightskyblue";
+    op3.style.backgroundColor = "lightskyblue";
+    op4.style.backgroundColor = "lightskyblue";
     isOptionSelected = false;
 }
 
