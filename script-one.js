@@ -33,6 +33,8 @@ const Questions = [{
 // Set start
 var start = true;
 
+var isOptionSelected = false;
+
 // Iterate
 function iterate(id) {
 
@@ -76,6 +78,7 @@ op1.addEventListener("click", () => {
     op3.style.backgroundColor = "lightskyblue";
     op4.style.backgroundColor = "lightskyblue";
     selected = op1.value;
+    isOptionSelected = true;
 })
 
 // Show selection for op2
@@ -85,6 +88,7 @@ op2.addEventListener("click", () => {
     op3.style.backgroundColor = "lightskyblue";
     op4.style.backgroundColor = "lightskyblue";
     selected = op2.value;
+    isOptionSelected = true;
 })
 
 // Show selection for op3
@@ -94,6 +98,7 @@ op3.addEventListener("click", () => {
     op3.style.backgroundColor = "lightgoldenrodyellow";
     op4.style.backgroundColor = "lightskyblue";
     selected = op3.value;
+    isOptionSelected = true;
 })
 
 // Show selection for op4
@@ -103,6 +108,7 @@ op4.addEventListener("click", () => {
     op3.style.backgroundColor = "lightskyblue";
     op4.style.backgroundColor = "lightgoldenrodyellow";
     selected = op4.value;
+    isOptionSelected = true;
 })
 
 
@@ -132,10 +138,11 @@ var id = 0;
 
 next.addEventListener("click", () => {
 start = false;
-if (id < 2) {
+if (id < 2 && isOptionSelected) {
     id++;
     iterate(id);
     console.log(id);
+    isOptionSelected = false;
 }
 
 })
