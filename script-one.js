@@ -36,12 +36,12 @@ const Questions = [{
 // Set start
 var start = true;
 
-questions = Questions.length;
+qnumber = Questions.length;
 
 var isEvaluated = false;
 var selectedOption = 0;
 
-document.getElementById("total-questions").innerText = questions.toString();
+document.getElementById("total-questions").innerText = qnumber.toString();
 var score = 0;
 
 // Iterate
