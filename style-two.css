@@ -18,6 +18,7 @@
 
 /* Set default styles for tab content */
 .tabcontent {
+	height: 300px;
 	color: white;
 	display: none;
 	text-align: center;
