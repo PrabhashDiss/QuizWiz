@@ -21,6 +21,7 @@ body{
 	height: 10vh;
 	font-size: x-large;
 	background-color: blueviolet;
+	border-radius: 15px;
 }
 .result{
 	margin: 10px;
@@ -38,6 +39,7 @@ body{
 	width: 80vw;
 	height: 20vh;
 	background-color: #9eb1b3;
+	border-radius: 15px;
 }
 .option{
 	margin: 10px;
@@ -68,8 +70,10 @@ body{
 }
 .evaluate{
 	background-color: #50DBB4;
+	border-radius: 15px;
 }
 .next{
 	color: white;
 	background-color: #BF3325;
+	border-radius: 15px;
 }
