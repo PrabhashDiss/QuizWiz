@@ -173,7 +173,7 @@ evaluate[0].addEventListener("click", () => {
     Questions[id].e = true;
     isEvaluated = true;
 
-    const percentage = (score / questions) * 100;
+    const percentage = (score / qnumber) * 100;
     gradeElement = document.getElementById('grade');
     textElement = document.getElementById('text');
     if (percentage >= 90) {
