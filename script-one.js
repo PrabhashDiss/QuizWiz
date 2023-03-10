@@ -174,8 +174,8 @@ evaluate[0].addEventListener("click", () => {
     isEvaluated = true;
 
     const percentage = (score / qnumber) * 100;
-    gradeElement = document.getElementById('grade');
-    textElement = document.getElementById('text');
+    const gradeElement = document.getElementById('grade');
+    const textElement = document.getElementById('text');
     if (percentage >= 75) {
         gradeElement.innerText = 'A';
         textElement.innerText = 'Excellent';
