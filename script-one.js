@@ -53,7 +53,7 @@ const question = document.getElementById("question");
 question.innerText = Questions[id].q;
 
 const qnumber = document.getElementById("qnumber");
-qnumber.innerText = "Question Number: " + (id.toString() + 1).toString();
+qnumber.innerText = "Question Number: " + (id + 1).toString();
 
 // Getting the options
 const op1 = document.getElementById('op1');
