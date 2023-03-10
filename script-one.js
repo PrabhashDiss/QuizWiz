@@ -33,6 +33,17 @@ const Questions = [{
 
 }]
 
+// Update time elapsed every second
+setInterval(() => {
+    const currentTime = new Date().getTime();
+    const timeElapsed = currentTime - startTime;
+    const seconds = Math.floor(timeElapsed / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const hours = Math.floor(minutes / 60);
+    const days = Math.floor(hours / 24);
+    document.getElementById("time-taken").innerText = days + "d " + hours % 24 + "h " + minutes % 60 + "m " + seconds % 60 + "s";
+}, 1000);
+
 // Set start
 var start = true;
 
@@ -44,6 +55,7 @@ var selectedOption = 0;
 document.getElementById("total-questions").innerText = qnumber.toString();
 var score = 0;
 var incorrect = 0;
+const startTime = new Date().getTime();
 
 // Iterate
 function iterate(id) {
