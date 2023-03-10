@@ -24,14 +24,6 @@ body{
 	background-color: blueviolet;
 	border-radius: 15px;
 }
-.result{
-	margin: 10px;
-	padding: 5px;
-	width:80vw;
-	height: 10vh;
-	text-align: center;
-	font-size: 50px;
-}
 .option-container{
 	display: flex;
 	justify-content: space-around;
@@ -71,12 +63,55 @@ body{
 	font-size: larger;
 }
 .evaluate{
+	display: block;
 	color: black;
 	background-color: #e9ec0b;
 	border-radius: 15px;
 }
 .next{
+	display: block;
 	color: white;
 	background-color: #1f1cd3;
 	border-radius: 15px;
+}
+
+#result-content {
+	background-color: white;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+}
+
+#result-content h2 {
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+
+#result-content p {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+#result-content span {
+	font-weight: bold;
+}
+
+#restart-btn,
+#close-btn {
+	margin-top: 20px;
+	padding: 10px 20px;
+	font-size: 20px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#restart-btn {
+	background-color: green;
+	color: white;
+	margin-right: 10px;
+}
+
+#close-btn {
+	background-color: red;
+	color: white;
 }
