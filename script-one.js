@@ -177,20 +177,20 @@ evaluate[0].addEventListener("click", () => {
     gradeElement = document.getElementById('grade');
     textElement = document.getElementById('text');
     if (percentage >= 90) {
-        gradeElement.textContent = 'A';
-        textElement.textContent = 'Excellent';
+        gradeElement.innerText = 'A';
+        textElement.innerText = 'Excellent';
     } else if (percentage >= 80) {
-        gradeElement.textContent = 'B';
-        textElement.textContent = 'Good';
+        gradeElement.innerText = 'B';
+        textElement.innerText = 'Good';
     } else if (percentage >= 70) {
-        gradeElement.textContent = 'C';
-        textElement.textContent = 'Average';
+        gradeElement.innerText = 'C';
+        textElement.innerText = 'Average';
     } else if (percentage >= 60) {
-        gradeElement.textContent = 'D';
-        textElement.textContent = 'Poor';
+        gradeElement.innerText = 'D';
+        textElement.innerText = 'Poor';
     } else {
-        gradeElement.textContent = 'F';
-        textElement.textContent = 'Fail';
+        gradeElement.innerText = 'F';
+        textElement.innerText = 'Fail';
     }
 })
 }
