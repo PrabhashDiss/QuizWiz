@@ -46,10 +46,11 @@ function iterate(id) {
 
 // Getting the question
 const question = document.getElementById("question");
-
 // Setting the question text
 question.innerText = Questions[id].q;
 
+const qnumber = document.getElementById("qnumber");
+qnumber.innerText = "Question Number: " + (id.toString() + 1).toString();
 
 // Getting the options
 const op1 = document.getElementById('op1');
