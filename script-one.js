@@ -33,7 +33,7 @@ const Questions = [{
 // Set start
 var start = true;
 
-var isOptionSelected = false;
+var isEvaluated = false;
 var selectedOption = 0;
 
 // Iterate
@@ -79,7 +79,6 @@ op1.addEventListener("click", () => {
     op3.style.backgroundColor = "lightskyblue";
     op4.style.backgroundColor = "lightskyblue";
     selected = op1.value;
-    isOptionSelected = true;
     selectedOption = 1;
 })
 
@@ -90,7 +89,6 @@ op2.addEventListener("click", () => {
     op3.style.backgroundColor = "lightskyblue";
     op4.style.backgroundColor = "lightskyblue";
     selected = op2.value;
-    isOptionSelected = true;
     selectedOption = 2;
 })
 
@@ -101,7 +99,6 @@ op3.addEventListener("click", () => {
     op3.style.backgroundColor = "lightgoldenrodyellow";
     op4.style.backgroundColor = "lightskyblue";
     selected = op3.value;
-    isOptionSelected = true;
     selectedOption = 3;
 })
 
@@ -112,7 +109,6 @@ op4.addEventListener("click", () => {
     op3.style.backgroundColor = "lightskyblue";
     op4.style.backgroundColor = "lightgoldenrodyellow";
     selected = op4.value;
-    isOptionSelected = true;
     selectedOption = 4;
 })
 
@@ -153,6 +149,7 @@ evaluate[0].addEventListener("click", () => {
             op4.style.backgroundColor = "lightcoral";
         }
     }
+    isEvaluated = true;
 })
 }
 
@@ -167,7 +164,7 @@ var id = 0;
 
 next.addEventListener("click", () => {
 start = false;
-if (id < 2 && isOptionSelected) {
+if (id < 2 && isEvaluated) {
     id++;
     iterate(id);
     console.log(id);
@@ -175,7 +172,7 @@ if (id < 2 && isOptionSelected) {
     op2.style.backgroundColor = "lightskyblue";
     op3.style.backgroundColor = "lightskyblue";
     op4.style.backgroundColor = "lightskyblue";
-    isOptionSelected = false;
+    isEvaluated = false;
 }
 
 })
