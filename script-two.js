@@ -14,6 +14,11 @@ function openCity(cityName, elmnt, color) {
   
     // Show the specific tab content
     document.getElementById(cityName).style.display = "block";
+    if (cityName == "London") {
+      document.getElementsByClassName("panel")[0].style.display = "flex";
+    } else {
+      document.getElementsByClassName("panel")[0].style.display = "none";
+    }
   
     // Add the specific color to the button used to open the tab content
     elmnt.style.backgroundColor = color;
