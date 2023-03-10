@@ -34,7 +34,7 @@ const Questions = [{
 }]
 
 // Update time elapsed every second
-setInterval(() => {
+const intervalId = setInterval(() => {
     const currentTime = new Date().getTime();
     const timeElapsed = currentTime - startTime;
     const seconds = Math.floor(timeElapsed / 1000);
@@ -215,5 +215,18 @@ if (id < 2 && isEvaluated) {
     op4.style.backgroundColor = "lightskyblue";
     isEvaluated = false;
 }
+})
 
+const restart = document.getElementById('restart');
+restart.addEventListener("click", () => {
+    location.reload();
+})
+
+const finish = document.getElementById('finish');
+finish.addEventListener("click", () => {
+    clearInterval(intervalId);
+    document.getElementsByClassName("question-container")[0].style.display = "none";
+    document.getElementById("qnumber").style.display = "none";
+    document.getElementsByClassName("option-container")[0].style.display = "none";
+    document.getElementsByClassName("navigation")[0].style.display = "none";
 })
