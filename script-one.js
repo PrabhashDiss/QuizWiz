@@ -43,6 +43,7 @@ var selectedOption = 0;
 
 document.getElementById("total-questions").innerText = qnumber.toString();
 var score = 0;
+var incorrect = 0;
 
 // Iterate
 function iterate(id) {
@@ -140,6 +141,10 @@ evaluate[0].addEventListener("click", () => {
             op4.style.backgroundColor = "lightgreen";
         }
     } else {
+        if (!Questions[id].e) {
+            incorrect++;
+        }
+        document.getElementById("incorrect-answers").innerText = incorrect.toString();
         if (selectedOption == 1) {
             op1.style.backgroundColor = "lightcoral";
         }
