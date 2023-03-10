@@ -172,6 +172,26 @@ evaluate[0].addEventListener("click", () => {
     }
     Questions[id].e = true;
     isEvaluated = true;
+
+    const percentage = (score / questions) * 100;
+    gradeElement = document.getElementById('grade');
+    textElement = document.getElementById('text');
+    if (percentage >= 90) {
+        gradeElement.textContent = 'A';
+        textElement.textContent = 'Excellent';
+    } else if (percentage >= 80) {
+        gradeElement.textContent = 'B';
+        textElement.textContent = 'Good';
+    } else if (percentage >= 70) {
+        gradeElement.textContent = 'C';
+        textElement.textContent = 'Average';
+    } else if (percentage >= 60) {
+        gradeElement.textContent = 'D';
+        textElement.textContent = 'Poor';
+    } else {
+        gradeElement.textContent = 'F';
+        textElement.textContent = 'Fail';
+    }
 })
 }
 
