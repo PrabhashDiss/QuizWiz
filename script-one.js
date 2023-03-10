@@ -205,7 +205,7 @@ const next = document.getElementsByClassName('next')[0];
 var id = 0;
 next.addEventListener("click", () => {
 start = false;
-if (id < 2 && isEvaluated) {
+if (id < qnumber - 1 && isEvaluated) {
     id++;
     iterate(id);
     console.log(id);
