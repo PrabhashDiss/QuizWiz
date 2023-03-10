@@ -6,7 +6,8 @@ const Questions = [{
         { text: "Surat", isCorrect: false },
         { text: "Delhi", isCorrect: true },
         { text: "mumbai", isCorrect: false }
-    ]
+    ],
+    e: false
 
 },
 {
@@ -16,7 +17,8 @@ const Questions = [{
         { text: "Phuket", isCorrect: false },
         { text: "Ayutthaya", isCorrect: false },
         { text: "Bangkok", isCorrect: true }
-    ]
+    ],
+    e: false
 
 },
 {
@@ -26,7 +28,8 @@ const Questions = [{
         { text: "vadodara", isCorrect: false },
         { text: "gandhinagar", isCorrect: true },
         { text: "rajkot", isCorrect: false }
-    ]
+    ],
+    e: false
 
 }]
 
@@ -36,13 +39,10 @@ var start = true;
 var isEvaluated = false;
 var selectedOption = 0;
 
+var score = 0;
+
 // Iterate
 function iterate(id) {
-
-// Getting the result display section
-var result = document.getElementsByClassName("result");
-result[0].innerText = "";
-
 
 // Getting the question
 const question = document.getElementById("question");
@@ -119,8 +119,10 @@ const evaluate = document.getElementsByClassName("evaluate");
 // Evaluate method
 evaluate[0].addEventListener("click", () => {
     if (selected == "true") {
-        result[0].innerHTML = "True";
-        result[0].style.color = "green";
+        if (!Questions[id].e) {
+            score++;
+        }
+        document.getElementById("score").innerText = score.toString();
         if (selectedOption == 1) {
             op1.style.backgroundColor = "lightgreen";
         }
@@ -134,8 +136,6 @@ evaluate[0].addEventListener("click", () => {
             op4.style.backgroundColor = "lightgreen";
         }
     } else {
-        result[0].innerHTML = "False";
-        result[0].style.color = "red";
         if (selectedOption == 1) {
             op1.style.backgroundColor = "lightcoral";
         }
@@ -149,6 +149,7 @@ evaluate[0].addEventListener("click", () => {
             op4.style.backgroundColor = "lightcoral";
         }
     }
+    Questions[id].e = true;
     isEvaluated = true;
 })
 }
