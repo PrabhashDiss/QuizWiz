@@ -1,37 +1,94 @@
 // Questions will be asked
-const Questions = [{
-    id: 0,
-    q: "What is capital of India?",
-    a: [{ text: "Gandhinagar", isCorrect: false },
-        { text: "Surat", isCorrect: false },
-        { text: "Delhi", isCorrect: true },
-        { text: "mumbai", isCorrect: false }
-    ],
-    e: false
-
-},
-{
-    id: 1,
-    q: "What is the capital of Thailand?",
-    a: [{ text: "Lampang", isCorrect: false, isSelected: false },
-        { text: "Phuket", isCorrect: false },
-        { text: "Ayutthaya", isCorrect: false },
-        { text: "Bangkok", isCorrect: true }
-    ],
-    e: false
-
-},
-{
-    id: 2,
-    q: "What is the capital of Gujarat?",
-    a: [{ text: "surat", isCorrect: false },
-        { text: "vadodara", isCorrect: false },
-        { text: "gandhinagar", isCorrect: true },
-        { text: "rajkot", isCorrect: false }
-    ],
-    e: false
-
-}]
+const Questions = [
+    {
+      id: 0,
+      q: "What is the most popular sport in the world?",
+      a: [
+        { text: "Football (Soccer)", isCorrect: true },
+        { text: "Basketball", isCorrect: false },
+        { text: "Cricket", isCorrect: false },
+        { text: "Baseball", isCorrect: false }
+      ],
+      e: false
+    },
+    {
+      id: 1,
+      q: "Which team has won the most Super Bowls in NFL history?",
+      a: [
+        { text: "Dallas Cowboys", isCorrect: false },
+        { text: "New England Patriots", isCorrect: false },
+        { text: "Pittsburgh Steelers", isCorrect: true },
+        { text: "San Francisco 49ers", isCorrect: false }
+      ],
+      e: false
+    },
+    {
+      id: 2,
+      q: "Which boxer has won the most heavyweight titles in history?",
+      a: [
+        { text: "Muhammad Ali", isCorrect: false },
+        { text: "Joe Frazier", isCorrect: false },
+        { text: "Mike Tyson", isCorrect: false },
+        { text: "Evander Holyfield", isCorrect: true }
+      ],
+      e: false
+    },
+    {
+      id: 3,
+      q: "Which country has won the most Olympic gold medals in history?",
+      a: [
+        { text: "United States", isCorrect: true },
+        { text: "Russia", isCorrect: false },
+        { text: "China", isCorrect: false },
+        { text: "Germany", isCorrect: false }
+      ],
+      e: false
+    },
+    {
+      id: 4,
+      q: "Which tennis player has won the most Grand Slam titles in history?",
+      a: [
+        { text: "Roger Federer", isCorrect: true },
+        { text: "Rafael Nadal", isCorrect: false },
+        { text: "Novak Djokovic", isCorrect: false },
+        { text: "Pete Sampras", isCorrect: false }
+      ],
+      e: false
+    },
+    {
+      id: 5,
+      q: "Which country won the first ever FIFA World Cup in 1930?",
+      a: [
+        { text: "Brazil", isCorrect: false },
+        { text: "Argentina", isCorrect: false },
+        { text: "Uruguay", isCorrect: true },
+        { text: "Germany", isCorrect: false }
+      ],
+      e: false
+    },
+    {
+      id: 6,
+      q: "Which NBA player has won the most championships in history?",
+      a: [
+        { text: "Michael Jordan", isCorrect: false },
+        { text: "Kareem Abdul-Jabbar", isCorrect: true },
+        { text: "LeBron James", isCorrect: false },
+        { text: "Bill Russell", isCorrect: false }
+      ],
+      e: false
+    },
+    {
+      id: 7,
+      q: "Which country has won the most FIFA Women's World Cups in history?",
+      a: [
+        { text: "Germany", isCorrect: false },
+        { text: "United States", isCorrect: true },
+        { text: "Norway", isCorrect: false },
+        { text: "Japan", isCorrect: false }
+      ],
+      e: false
+    }
+];
 
 // Update time elapsed every second
 const intervalId = setInterval(() => {
@@ -65,8 +122,8 @@ const question = document.getElementById("question");
 // Setting the question text
 question.innerText = Questions[id].q;
 
-const qnumber = document.getElementById("qnumber");
-qnumber.innerText = "Question Number: " + (id + 1).toString();
+const questionnumber = document.getElementById("qnumber");
+questionnumber.innerText = "Question Number: " + (id + 1).toString();
 
 // Getting the options
 const op1 = document.getElementById('op1');
