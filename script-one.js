@@ -236,18 +236,23 @@ evaluate[0].addEventListener("click", () => {
     if (percentage >= 75) {
         gradeElement.innerText = 'A';
         textElement.innerText = 'Excellent';
+        textElement.style.color = 'green';
     } else if (percentage >= 60) {
         gradeElement.innerText = 'B';
         textElement.innerText = 'Good';
+        textElement.style.color = 'blue';
     } else if (percentage >= 50) {
         gradeElement.innerText = 'C';
         textElement.innerText = 'Average';
+        textElement.style.color = 'orange';
     } else if (percentage >= 30) {
         gradeElement.innerText = 'D';
         textElement.innerText = 'Poor';
+        textElement.style.color = 'red';
     } else {
         gradeElement.innerText = 'F';
         textElement.innerText = 'Fail';
+        textElement.style.color = 'gray';
     }
 })
 }
@@ -282,6 +287,7 @@ restart.addEventListener("click", () => {
 const finish = document.getElementById('finish');
 finish.addEventListener("click", () => {
     clearInterval(intervalId);
+    document.getElementById("text").style.display = "block";
     document.getElementsByClassName("question-container")[0].style.display = "none";
     document.getElementById("qnumber").style.display = "none";
     document.getElementsByClassName("option-container")[0].style.display = "none";
