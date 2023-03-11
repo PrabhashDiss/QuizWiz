@@ -15,6 +15,7 @@ function openCity(cityName, elmnt, color) {
     // Show the specific tab content
     document.getElementById(cityName).style.display = "block";
     document.getElementsByClassName("panel")[0].style.display = (cityName == "London") ? "flex" : "none";
+    document.getElementsByClassName("container")[0].style.display = (cityName == "Paris") ? "flex" : "none";
   
     // Add the specific color to the button used to open the tab content
     elmnt.style.backgroundColor = color;
