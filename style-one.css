@@ -96,6 +96,10 @@ body{
 	font-weight: bold;
 }
 
+#text {
+	display: none;
+}  
+
 #restart,
 #finish {
 	margin-top: 20px;
